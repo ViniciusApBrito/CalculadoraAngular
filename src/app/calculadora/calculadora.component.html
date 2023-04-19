@@ -1,0 +1,37 @@
+<div class="container mt-5">
+    <div class="row">
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h4>Calculadora</h4>
+          </div>
+          <div class="card-body">
+            <div class="form-group">
+              <input type="text" class="form-control" [(ngModel)]="numero1">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" [(ngModel)]="numero2">
+            </div>
+            <div class="form-group">
+              <button class="btn btn-primary" (click)="somar()">Somar</button>
+              <button class="btn btn-primary" (click)="subtrair()">Subtrair</button>
+              <button class="btn btn-primary" (click)="multiplicar()">Multiplicar</button>
+              <button class="btn btn-primary" (click)="dividir()">Dividir</button>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="card">
+          <div class="card-header">
+            <h4>Resultado</h4>
+          </div>
+          <div class="card-body">
+            <p *ngIf="resultado">{{resultado}}</p>
+            <p *ngIf="!resultado">Nenhum resultado a exibir</p>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
